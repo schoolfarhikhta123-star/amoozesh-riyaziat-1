@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7357e8">
+  <title>آموزش ریاضیات ۱ | یادگیری با بازی</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="صفحه اصلی"><span class="brand-icon">✦</span><span>ریاضی‌یار <small>آموزش ریاضیات ۱</small></span></a>
+    <label class="student-label">نام شاگرد <input id="studentName" type="text" maxlength="40" placeholder="نام خود را بنویسید"></label>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-heading"><span>📚</span><div><strong>درس‌ها</strong><small>۲۱ موضوع آموزشی</small></div></div>
+      <nav id="topicList" class="topic-list" aria-label="فهرست درس‌ها"></nav>
+      <button id="scoresButton" class="scores-button">🏆 نمره‌های من</button>
+    </aside>
+    <section class="main-content">
+      <section class="welcome-card" id="welcomeCard">
+        <div><span class="eyebrow">یاد بگیر، تمرین کن، بدرخش!</span><h1>سلام قهرمان ریاضی! <span>🌈</span></h1><p>یک درس را انتخاب کن و با بازی و تمرین، ریاضی را بهتر یاد بگیر.</p></div>
+        <div class="welcome-art" aria-hidden="true"><span>➗</span><span>＋</span><span>×</span><span>＝</span><b>3</b></div>
+      </section>
+      <div id="lessonView" class="lesson-view" hidden>
+        <div class="lesson-heading"><div><span class="eyebrow" id="topicNumber"></span><h1 id="topicTitle"></h1></div><div class="topic-emoji" id="topicEmoji"></div></div>
+        <div class="tabs" role="tablist" aria-label="بخش‌های درس">
+          <button class="tab active" data-tab="lesson">📖 درس</button><button class="tab" data-tab="game">🎮 بازی ۳۰ سوالی</button><button class="tab" data-tab="worksheet">📝 کاربرگ A4</button><button class="tab" data-tab="video">▶ ویدیوی درس</button>
+        </div>
+        <section id="lessonPanel" class="panel lesson-panel"></section>
+        <section id="gamePanel" class="panel" hidden></section>
+        <section id="worksheetPanel" class="panel" hidden></section>
+        <section id="videoPanel" class="panel" hidden></section>
+      </div>
+      <section id="scoresPanel" class="scores-panel" hidden><div class="panel-title"><div><span class="eyebrow">پیشرفت شما</span><h2>🏆 نمره‌های ذخیره‌شده</h2></div><button id="backButton" class="secondary-button">بازگشت به درس‌ها</button></div><div id="scoresContent"></div></section>
+    </section>
+  </main>
+  <footer>نمره‌ها در همین مرورگر و روی همین دستگاه ذخیره می‌شوند. برای نگهداری اطلاعات، از رایانه و مرورگر خود پشتیبان بگیرید.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
